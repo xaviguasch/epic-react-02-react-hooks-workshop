@@ -6,6 +6,8 @@ import React, { useState, useEffect } from 'react'
 function Greeting({ initialName = '' }) {
   // 🐨 initialize the state to the value from localStorage
   // 💰 window.localStorage.getItem('name') ?? initialName
+
+  //  EXTRA CREDIT 1
   const [name, setName] = React.useState(
     () => window.localStorage.getItem('name') || initialName
   )
