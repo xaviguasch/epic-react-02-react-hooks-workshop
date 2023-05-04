@@ -18,6 +18,8 @@ function Greeting({ initialName = '' }) {
 
   useEffect(() => {
     window.localStorage.setItem('name', name)
+
+    // adding dependency to avoid too much useEffect calls for every re-render
   }, [name])
 
   function handleChange(event) {
